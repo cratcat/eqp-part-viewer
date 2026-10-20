@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Purion XE 모듈별 파트 분류 및 설비 위치 참고 카탈로그">
+  <title>Purion XE | Module Parts Catalog</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">PX</span><div><strong>PURION XE</strong><small>MODULE PARTS CATALOG</small></div></div>
+    <div class="top-meta"><span class="status-dot"></span> Reference catalog <span class="divider">|</span> GitHub Pages Ready</div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">HIGH ENERGY ION IMPLANTATION</div>
+      <h1>모듈별 파트 카탈로그</h1>
+      <p>모듈 위치를 선택하면 해당 모듈의 중카테고리와 파트 후보를 확인할 수 있습니다.</p>
+      <div class="notice"><strong>중요:</strong> 이 페이지는 공개 자료와 일반적인 이온주입기 구조를 바탕으로 만든 <b>초기 분류 템플릿</b>입니다. 실제 Purion XE BOM/파트명/장착 위치와 일치한다고 보증하지 않습니다. 정식 파트번호와 정확한 구성은 해당 장비의 모델·옵션별 Axcelis 문서로 검증해야 합니다.</div>
+    </section>
+
+    <section class="workspace">
+      <aside class="module-panel">
+        <div class="panel-heading"><span>EQUIPMENT VIEW</span><span class="count">HOVER / CLICK</span></div>
+        <div class="equipment-view">
+          <div class="map-label">모듈 영역에 마우스를 올리거나 클릭하세요</div>
+          <svg class="machine-svg" viewBox="0 0 320 218" role="img" aria-label="Purion XE 장비의 개념적 모듈 맵">
+            <defs>
+              <linearGradient id="cabinet" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#263c56"/><stop offset="1" stop-color="#13243a"/>
+              </linearGradient>
+              <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#62d7ed" stop-opacity=".15"/><stop offset=".5" stop-color="#62d7ed" stop-opacity=".8"/><stop offset="1" stop-color="#62d7ed" stop-opacity=".15"/>
+              </linearGradient>
+            </defs>
+            <!-- Conceptual cabinet silhouette, not a manufacturer drawing -->
+            <path d="M15 35 L285 35 L305 52 L305 180 L15 180 Z" fill="url(#cabinet)" stroke="#4c6581" stroke-width="1.5"/>
+            <path d="M285 35 L305 52 L305 180 L285 164 Z" fill="#0d1a2b" stroke="#405772"/>
+            <path d="M15 35 L35 18 L303 18 L285 35 Z" fill="#314962" stroke="#4c6581"/>
+            <rect x="27" y="47" width="258" height="121" rx="5" fill="#0c1727" stroke="#354b65"/>
+            <path d="M39 107 H273" stroke="url(#beam)" stroke-width="3" stroke-dasharray="5 4"/>
+            <text x="160" y="12" text-anchor="middle" font-size="8" fill="#8198b4" letter-spacing="1.4">CONCEPTUAL MODULE MAP</text>
+            <g class="machine-zone active" data-module="source" tabindex="0" role="button" aria-label="SOURCE module">
+              <rect x="34" y="57" width="35" height="98" rx="3"/><text x="51.5" y="99">SRC</text><text x="51.5" y="111" class="zone-sub">01</text>
+            </g>
+            <g class="machine-zone" data-module="le" tabindex="0" role="button" aria-label="LE module">
+              <rect x="73" y="57" width="31" height="98" rx="3"/><text x="88.5" y="99">LE</text><text x="88.5" y="111" class="zone-sub">02</text>
+            </g>
+            <g class="machine-zone" data-module="linac" tabindex="0" role="button" aria-label="LINAC module">
+              <rect x="108" y="57" width="51" height="98" rx="3"/><text x="133.5" y="99">LINAC</text><text x="133.5" y="111" class="zone-sub">03</text>
+            </g>
+            <g class="machine-zone" data-module="heb" tabindex="0" role="button" aria-label="HEB module">
+              <rect x="163" y="57" width="32" height="98" rx="3"/><text x="179" y="99">HEB</text><text x="179" y="111" class="zone-sub">04</text>
+            </g>
+            <g class="machine-zone" data-module="corrector" tabindex="0" role="button" aria-label="CORRECTOR module">
+              <rect x="199" y="57" width="34" height="98" rx="3"/><text x="216" y="95">CORR</text><text x="216" y="107" class="zone-sub">05</text>
+            </g>
+            <g class="machine-zone" data-module="chamber" tabindex="0" role="button" aria-label="CHAMBER module">
+              <rect x="237" y="57" width="39" height="98" rx="3"/><text x="256.5" y="99">CH</text><text x="256.5" y="111" class="zone-sub">06</text>
+            </g>
+            <g class="machine-zone" data-module="endstation" tabindex="0" role="button" aria-label="ENDSTATION module">
+              <rect x="237" y="128" width="39" height="27" rx="2"/><text x="256.5" y="140">END</text><text x="256.5" y="150" class="zone-sub">07</text>
+            </g>
+            <g class="machine-zone" data-module="loadport" tabindex="0" role="button" aria-label="LOADPORT module">
+              <rect x="39" y="140" width="28" height="15" rx="2"/><text x="53" y="150">LP</text>
+            </g>
+            <text x="160" y="197" text-anchor="middle" font-size="9" fill="#91a5bd">Hover = preview · Click = select module</text>
+            <text x="160" y="209" text-anchor="middle" font-size="7.5" fill="#637b97">Illustrative layout only — not an official Axcelis drawing</text>
+          </svg>
+          <div class="hover-hint" id="hoverHint">선택된 모듈: SOURCE · 소스</div>
+        </div>
+        <div class="panel-heading"><span>MODULE LIST</span><span class="count" id="moduleCount">08</span></div>
+        <div class="machine-map" aria-label="모듈 선택 목록">
+          <div class="map-label">개념적 장비 흐름 · 실제 배치도 아님</div>
+          <div class="flow-line"></div>
+          <button class="map-node active" data-module="source"><span class="node-num">01</span><span><b>SOURCE</b><small>이온 생성</small></span></button>
+          <button class="map-node" data-module="le"><span class="node-num">02</span><span><b>LE</b><small>저에너지 구간*</small></span></button>
+          <button class="map-node" data-module="linac"><span class="node-num">03</span><span><b>LINAC</b><small>RF 가속</small></span></button>
+          <button class="map-node" data-module="heb"><span class="node-num">04</span><span><b>HEB</b><small>고에너지 빔 구간*</small></span></button>
+          <button class="map-node" data-module="corrector"><span class="node-num">05</span><span><b>CORRECTOR</b><small>빔 보정</small></span></button>
+          <button class="map-node" data-module="chamber"><span class="node-num">06</span><span><b>CHAMBER</b><small>공정 챔버</small></span></button>
+          <button class="map-node" data-module="endstation"><span class="node-num">07</span><span><b>ENDSTATION</b><small>웨이퍼 주입</small></span></button>
+          <button class="map-node" data-module="loadport"><span class="node-num">08</span><span><b>LOADPORT</b><small>웨이퍼 입출고</small></span></button>
+          <p class="map-foot">* LE / HEB의 정확한 의미와 경계는 장비 구성 및 현장 용어 기준으로 확인하세요.</p>
+        </div>
+      </aside>
+
+      <section class="catalog-panel">
+        <div class="catalog-top">
+          <div><div class="eyebrow" id="moduleEyebrow">MODULE 01 / ION GENERATION</div><h2 id="moduleTitle">SOURCE <span>소스</span></h2><p id="moduleDescription">도펀트 이온을 생성하고 빔라인으로 추출하는 영역</p></div>
+          <div class="catalog-actions"><button id="expandAll" class="secondary-btn">전체 펼치기</button><button id="collapseAll" class="secondary-btn">전체 접기</button></div>
+        </div>
+        <div class="toolbar">
+          <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="파트명, 중카테고리, 키워드 검색..." autocomplete="off"></label>
+          <select id="categoryFilter" aria-label="중카테고리 필터"><option value="all">모든 중카테고리</option></select>
+          <label class="toggle"><input id="showDetails" type="checkbox" checked><span>설명 표시</span></label>
+        </div>
+        <div class="summary-row"><span id="resultSummary">중카테고리 0개 · 파트 후보 0개</span><span class="tag">DRAFT / VERIFY</span></div>
+        <div id="categoryList" class="category-list"></div>
+        <div id="emptyState" class="empty-state" hidden><strong>검색 결과가 없습니다.</strong><span>검색어 또는 중카테고리 필터를 바꿔보세요.</span></div>
+        <div class="footnote"><b>데이터 기준:</b> 기능 기반 후보 파트명이며, 제조사 공식 BOM을 전재한 목록이 아닙니다. “해당 모듈에 있을 수 있음”과 “실제 설치 확인”을 구분해 사용하세요.</div>
+      </section>
+    </section>
+
+    <section class="bottom-info">
+      <div><span class="info-icon">i</span><div><b>현장 데이터로 확정하는 방법</b><p>장비 Serial / Model / Configuration, Axcelis Parts List·Service Manual, 현장 P&ID·전장도, PM 체크리스트를 기준으로 파트명과 위치를 확인한 뒤 이 목록을 수정하세요.</p></div></div>
+      <button id="downloadData" class="secondary-btn">현재 모듈 JSON 내보내기</button>
+    </section>
+    <footer>Independent engineering reference · Not affiliated with Axcelis Technologies · Verify against controlled documentation</footer>
+  </main>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
